@@ -12,5 +12,5 @@ docker run --name <image_name> --link <ssc_db_image_name>:mysql -p 80:8080 <ssc_
 ```
 to monitor ssc.log:
 ```
-docker exec <image_name> -it tail -f /usr/local/tomcat/logs/ssc.log
+docker exec -it <image_name> tail -f /usr/local/tomcat/logs/ssc.log
 ```
