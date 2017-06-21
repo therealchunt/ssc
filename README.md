@@ -10,7 +10,7 @@ with link to db image
 ```
 docker run --name <image_name> --link <ssc_db_image_name>:mysql -p 80:8080 <ssc_image>
 ```
-to monitor ssc.log:
+tail ssc.log
 ```
 docker exec -it <image_name> tail -f /usr/local/tomcat/logs/ssc.log
 ```
