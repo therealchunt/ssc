@@ -10,6 +10,11 @@ dataSource.properties and ssc.properties (and others) can be copied from existin
 
 ```java -jar ${SSC_ZIP_EXPLODED}/ssc-configuration-wizard.jar -automationMode -war /path/to/ssc.war -jdbcDriver mysql-connector-java-5.1.35.jar -license /path/to/fortify.license -loadfrom dataSource.properties -loadfrom ssc.properties```
 
+# Build
+```
+docker build --no-cache -t <image_name> .
+```
+
 # Start
 with link to db image
 ```
