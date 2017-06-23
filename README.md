@@ -12,15 +12,15 @@ dataSource.properties and ssc.properties can be copied from existing ssc and use
 
 # Build
 ```
-docker build --no-cache -t <image_name> .
+docker build --no-cache -t ${SSC_IMG} .
 ```
 
 # Start
 with link to db image
 ```
-docker run --name <image_name> --link <ssc_db_image_name>:mysql -p 80:8080 <ssc_image>
+docker run --name ${SSC_CONT_NAME} --network=${NETWORK_HOST} --ip ${SSC_IP} -p 80:8080 -d ${SSC_IMG}
 ```
 tail ssc.log
 ```
-docker exec -it <image_name> tail -f /usr/local/tomcat/logs/ssc.log
+docker exec -it ${SSC_CONT_NAME} tail -f /usr/local/tomcat/logs/ssc.log
 ```
